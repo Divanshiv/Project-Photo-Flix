@@ -470,6 +470,14 @@ p {
   padding: 3rem;
 }
 
+.name{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+
+}
+
 /* Favourites Section */
 .favourites {
   padding: 5rem 0;
@@ -524,29 +532,36 @@ p {
   padding: 0;
 }
 
+.btns{
+  display: flex;
+  justify-content: space-between; 
+  align-items: center;
+} 
+
 /* Share Button */
 .share-btn,
 .download-btn {
-  position: absolute;
-  bottom: 0.5rem;
+  position: relative;
+  bottom: 1;
   background-color: transparent;
   color: rgb(239, 191, 239);
   border: none;
   outline: none;
-  padding: 0.5rem; /* Increased padding for better clickability */
+  padding-top: 0.5rem; 
   border-radius: 50%;
-  font-size: 1.5rem; /* Increased font size for visibility */
+  font-size: 1.5rem;
   cursor: pointer;
-  transition: transform 0.2s ease-in-out, background-color 0.2s ease-in-out; /* Added background color transition */
+  transition: transform 0.2s ease-in-out, background-color 0.2s ease-in-out;
+  left: 0;
 }
 
 .share-btn {
-  left: 0.5rem; /* Adjusted left value for placement */
+  left: 0.5rem;
   border-color: #3b0361;
 }
 
 .download-btn {
-  left: 3rem; /* Adjusted left value to control the horizontal position */
+  left: 3rem;
   border-color: #3b0361;
 }
 
@@ -561,15 +576,13 @@ p {
   box-shadow: none;
 }
 
-/* Add a gap between <h4>{name}</h4> and the buttons */
 .photo-header {
   display: flex;
   align-items: center;
-  gap: 1rem; /* Adjust the gap value as needed */
+  gap: 1rem; 
 }
 
-/* Add space between navbar and photos */
 .photos {
   padding: 5rem 0;
-  margin-top: 5rem; /* Add the desired margin value to create space */
+  margin-top: 5rem; 
 }

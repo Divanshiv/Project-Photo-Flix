@@ -60,7 +60,17 @@ const Photos = ({
       />
       <div className="photo-info">
         <div className="photo-header">
+          <div className='name'>
           <h4>{name}</h4>
+          <div className="btns">
+          <button className="share-btn" onClick={handleShare}>
+            <FaShare className="share-icon" />
+          </button>
+          <button className="download-btn" onClick={handleDownload}>
+            <FaDownload className="download-icon" />
+          </button>
+       </div>
+          </div>
           <button className={`favorite-btn ${isPhotoFavorite ? 'active' : ''}`} onClick={handleFavoriteClick}>
             <span role="img" aria-label="Favorite">
               {isPhotoFavorite ? '❤️' : '♡'}
@@ -71,17 +81,12 @@ const Photos = ({
           <p>
             <FaThumbsUp className="heart-icon" /> {likes}
           </p>
-          <button className="share-btn" onClick={handleShare}>
-            <FaShare className="share-icon" />
-          </button>
-          <button className="download-btn" onClick={handleDownload}>
-            <FaDownload className="download-icon" />
-          </button>
         </div>
         <a href={portfolio_url}>
           <img src={medium} className="user-img" alt={`${name}'s profile`} />
         </a>
       </div>
+     
 
       {isLightboxOpen && (
         <Lightbox
